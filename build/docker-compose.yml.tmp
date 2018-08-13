@@ -1,0 +1,17 @@
+version: '2'
+services:
+  lb:
+    image: rancher/lb-service-haproxy:v0.9.1
+    ports:
+      - 8089:80/tcp
+  dns:
+    image: steamcache/steamcache-dns:latest
+    ports:
+      - 53:53/udp
+    environment:
+      USE_GENERIC_CACHE: true
+      LANCACHE_IP: ${CACHE_IP}
+  sni-proxy:
+    image: steamcache/sni-proxy:latest
+    ports:
+        - 443:443/tcp
