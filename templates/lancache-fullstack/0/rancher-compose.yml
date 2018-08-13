@@ -10,42 +10,11 @@ catalog:
           label: Cache directory (This should be available on ALL hosts that the caching servers will be running on.
           required: true
           type: string
-        - variable: BLIZZARDCACHE_IP
-          label: Blizzard IP Address
+        - variable: CACHE_IP
+          label: Cache IP Address
           default: 10.0.0.1
           required: true
           type: string
-        - variable: FRONTIERCACHE_IP
-          label: Frontier IP Address
-          default: 10.0.0.2
-          required: true
-          type: string
-        - variable: ORIGINCACHE_IP
-          label: Origin IP Address
-          default: 10.0.0.3
-          required: true
-          type: string
-        - variable: RIOTCACHE_IP
-          label: RIOT IP Address
-          default: 10.0.0.4
-          required: true
-          type: string
-        - variable: STEAMCACHE_IP
-          label: Steam IP Address
-          default: 10.0.0.5
-          required: true
-          type: string
-        - variable: UPLAYCACHE_IP
-          label: Uplay IP Address
-          default: 10.0.0.6
-          required: true
-          type: string
-        - variable: WINDOWSCACHE_IP
-          label: Windows IP Address
-          default: 10.0.0.7
-          required: true
-          type: string
-
 services:
   dns:
     scale: 1
@@ -82,4 +51,191 @@ services:
   windows:
     scale: 1
     start_on_create: true
-
+  lb:
+    scale: 1
+    start_on_create: true
+    lb_config:
+      certs: []
+      port_rules:
+    - hostname: *.content.steampowered.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: content1.steampowered.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: content2.steampowered.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: content3.steampowered.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: content4.steampowered.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: content5.steampowered.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: content6.steampowered.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: content7.steampowered.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: content8.steampowered.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: cs.steampowered.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: steamcontent.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: client-download.steampowered.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: *.hsar.steampowered.com.edgesuite.net
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: *.akamai.steamstatic.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: content-origin.steampowered.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: clientconfig.akamai.steamtransparent.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: steampipe.akamaized.net
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: edgecast.steamstatic.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: steam.apac.qtlglb.com.mwcloudcdn.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: *.cs.steampowered.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: *.edgecast.steamstatic.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: *.steamcontent.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: cdn1-sea1.valve.net
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: cdn2-sea1.valve.net
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: *.steam-content-dnld-1.apac-1-cdn.cqloud.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
+    - hostname: steam.apac.qtlglb.com
+      path: ''
+      priority: 1
+      protocol: http
+      service: steam
+      source_port: 80
+      target_port: 80
