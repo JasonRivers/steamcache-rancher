@@ -47,6 +47,7 @@ cat services.json | jq -r '.cache_domains[] | .name, .domain_files[]' | while re
         if ! grep "${URL}" ${RANCHER_TEMPLATE} >/dev/null 2>&1 ; then
             echo "      - hostname: '${URL}'" >> ${RANCHER_TEMPLATE}
             echo "        path: ''" >> ${RANCHER_TEMPLATE}
+            echo "        access: public" >> ${RANCHER_TEMPLATE}
             echo "        priority: 1" >> ${RANCHER_TEMPLATE}
             echo "        protocol: http" >> ${RANCHER_TEMPLATE}
             echo "        service: ${SERVICE}" >> ${RANCHER_TEMPLATE}
