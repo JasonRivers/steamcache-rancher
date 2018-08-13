@@ -1,0 +1,7 @@
+name: lancache-nodns
+description: "LanCache Stack for LAN Gaming without DNS"
+version: v1.0.0
+category: Caching
+maintainer: Jason Rivers
+license: MIT License
+projectURL: "https://steamcache.net"
