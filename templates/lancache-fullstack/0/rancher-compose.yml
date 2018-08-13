@@ -6,11 +6,11 @@ catalog:
     version: 1.0.0
     description: "Full LAN Caching stack for Blizzard, Frontier, Origin, Riot, Steam, Uplay and Windows Updates"
     questions:
-        - variable: CACHE_ROOT
+        - variable: "CACHE_ROOT"
           label: Cache directory (This should be available on ALL hosts that the caching servers will be running on.
           required: true
           type: string
-        - variable: CACHE_IP
+        - variable: "CACHE_IP"
           label: Cache IP Address
           default: 10.0.0.1
           required: true

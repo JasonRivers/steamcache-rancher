@@ -13,7 +13,7 @@ services:
     ports:
       - 53:53/udp
     environment:
-      CACHE_IP=${CACHE_IP}
+      CACHE_IP: ${CACHE_IP}
   sni-proxy:
     image: steamcache/sni-proxy:latest
     ports:
