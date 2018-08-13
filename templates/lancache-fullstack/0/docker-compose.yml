@@ -8,7 +8,7 @@ services:
       io.rancher.container.agent.role: environmentAdmin, agent
       io.rancher.container.agent_service.draint_provider: 'true'
       io.rancher.container.create_agent: 'true'
-  dns:
+  nameserver:
     image: steamcache/steamcache-dns:latest
     ports:
       - 53:53/udp
