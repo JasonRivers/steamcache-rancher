@@ -4,16 +4,13 @@ services:
     image: rancher/lb-service-haproxy:v0.9.1
     ports:
       - 8089:80/tcp
-    labels:
-      io.rancher.container.agent.role: environmentAdmin, agent
-      io.rancher.container.agent_service.draint_provider: 'true'
-      io.rancher.container.create_agent: 'true'
   nameserver:
     image: steamcache/steamcache-dns:latest
     ports:
       - 53:53/udp
     environment:
-      CACHE_IP: ${CACHE_IP}
+      USE_GENERIC_CACHE: true
+      LANCACHE_IP: ${CACHE_IP}
   sni-proxy:
     image: steamcache/sni-proxy:latest
     ports:
