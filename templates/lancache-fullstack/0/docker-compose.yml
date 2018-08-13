@@ -3,7 +3,7 @@ services:
   lb:
     image: rancher/lb-service-haproxy:v0.9.1
     ports:
-      - 80:80/tcp
+      - 8089:80/tcp
     labels:
       io.rancher.container.agent.role: environmentAdmin, agent
       io.rancher.container.agent_service.draint_provider: 'true'
