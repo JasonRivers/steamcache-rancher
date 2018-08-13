@@ -1,0 +1,9 @@
+version: '2'
+services:
+  steamcache:
+    image: steamcache/steamcache:latest
+    volumes:
+      - ${CACHE_ROOT}/steam/data:/data/cache
+      - ${CACHE_ROOT}/steam/logs:/data/logs
+    ports:
+      - ${STEAMCACHE_IP}:80:80/tcp

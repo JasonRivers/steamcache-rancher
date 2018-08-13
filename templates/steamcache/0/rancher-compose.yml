@@ -1,0 +1,23 @@
+version: '2'
+
+catalog:
+
+    name: steamcache
+    version: 1.0.0
+    description: "Caching server for Steam"
+    questions:
+        - variable: CACHE_ROOT
+          label: Cache directory (This should be available on ALL hosts that the caching servers will be running on).
+          required: true
+          type: string
+        - variable: STEAMCACHE_IP
+          label: Steam IP Address
+          default: 10.0.0.1
+          required: true
+          type: string
+
+services:
+  steam:
+    scale: 1
+    start_on_create: true
+
