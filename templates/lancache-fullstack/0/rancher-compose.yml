@@ -715,63 +715,63 @@ services:
         service: xboxlive
         source_port: 80
         target_port: 80
-   apple:
-     scale: 1
-     start_on_create: true
-   arenanet:
-     scale: 1
-     start_on_create: true
-   blizzard:
-     scale: 1
-     start_on_create: true
-   daybreak:
-     scale: 1
-     start_on_create: true
-   frontier:
-     scale: 1
-     start_on_create: true
-   gog:
-     scale: 1
-     start_on_create: true
-   hirez:
-     scale: 1
-     start_on_create: true
-   minecraft:
-     scale: 1
-     start_on_create: true
-   nexusmods:
-     scale: 1
-     start_on_create: true
-   nintendo:
-     scale: 1
-     start_on_create: true
-   origin:
-     scale: 1
-     start_on_create: true
-   riot:
-     scale: 1
-     start_on_create: true
-   rockstar:
-     scale: 1
-     start_on_create: true
-   sony:
-     scale: 1
-     start_on_create: true
-   steam:
-     scale: 1
-     start_on_create: true
-   uplay:
-     scale: 1
-     start_on_create: true
-   twitch:
-     scale: 1
-     start_on_create: true
-   wargaming:
-     scale: 1
-     start_on_create: true
-   wsus:
-     scale: 1
-     start_on_create: true
-   xboxlive:
-     scale: 1
-     start_on_create: true
+  apple:
+    scale: 1
+    start_on_create: true
+  arenanet:
+    scale: 1
+    start_on_create: true
+  blizzard:
+    scale: 1
+    start_on_create: true
+  daybreak:
+    scale: 1
+    start_on_create: true
+  frontier:
+    scale: 1
+    start_on_create: true
+  gog:
+    scale: 1
+    start_on_create: true
+  hirez:
+    scale: 1
+    start_on_create: true
+  minecraft:
+    scale: 1
+    start_on_create: true
+  nexusmods:
+    scale: 1
+    start_on_create: true
+  nintendo:
+    scale: 1
+    start_on_create: true
+  origin:
+    scale: 1
+    start_on_create: true
+  riot:
+    scale: 1
+    start_on_create: true
+  rockstar:
+    scale: 1
+    start_on_create: true
+  sony:
+    scale: 1
+    start_on_create: true
+  steam:
+    scale: 1
+    start_on_create: true
+  uplay:
+    scale: 1
+    start_on_create: true
+  twitch:
+    scale: 1
+    start_on_create: true
+  wargaming:
+    scale: 1
+    start_on_create: true
+  wsus:
+    scale: 1
+    start_on_create: true
+  xboxlive:
+    scale: 1
+    start_on_create: true

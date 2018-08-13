@@ -32,9 +32,9 @@ cat services.json | jq -r '.cache_domains[] | .name, .domain_files[]' | while re
         echo "      - \${CACHE_ROOT}/${SERIVCE}/cache:/data/cache" >> ${DOCKER_TEMPLATE}
         echo "      - \${CACHE_ROOT}/${SERIVCE}/logs:/data/logs" >> ${DOCKER_TEMPLATE}
 
-        echo "   ${SERVICE}:" >> ${SERVICES}
-        echo "     scale: 1" >> ${SERVICES}
-        echo "     start_on_create: true" >> ${SERVICES}
+        echo "  ${SERVICE}:" >> ${SERVICES}
+        echo "    scale: 1" >> ${SERVICES}
+        echo "    start_on_create: true" >> ${SERVICES}
     else
 
 	curl -s -o ${L} https://raw.githubusercontent.com/uklans/cache-domains/master/${L}
