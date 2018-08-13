@@ -57,175 +57,175 @@ services:
     lb_config:
       certs: []
       port_rules:
-      - hostname: *.content.steampowered.com
+      - hostname: '*.content.steampowered.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: content1.steampowered.com
+      - hostname: 'content1.steampowered.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: content2.steampowered.com
+      - hostname: 'content2.steampowered.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: content3.steampowered.com
+      - hostname: 'content3.steampowered.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: content4.steampowered.com
+      - hostname: 'content4.steampowered.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: content5.steampowered.com
+      - hostname: 'content5.steampowered.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: content6.steampowered.com
+      - hostname: 'content6.steampowered.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: content7.steampowered.com
+      - hostname: 'content7.steampowered.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: content8.steampowered.com
+      - hostname: 'content8.steampowered.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: cs.steampowered.com
+      - hostname: 'cs.steampowered.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: steamcontent.com
+      - hostname: 'steamcontent.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: client-download.steampowered.com
+      - hostname: 'client-download.steampowered.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: *.hsar.steampowered.com.edgesuite.net
+      - hostname: '*.hsar.steampowered.com.edgesuite.net'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: *.akamai.steamstatic.com
+      - hostname: '*.akamai.steamstatic.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: content-origin.steampowered.com
+      - hostname: 'content-origin.steampowered.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: clientconfig.akamai.steamtransparent.com
+      - hostname: 'clientconfig.akamai.steamtransparent.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: steampipe.akamaized.net
+      - hostname: 'steampipe.akamaized.net'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: edgecast.steamstatic.com
+      - hostname: 'edgecast.steamstatic.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: steam.apac.qtlglb.com.mwcloudcdn.com
+      - hostname: 'steam.apac.qtlglb.com.mwcloudcdn.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: *.cs.steampowered.com
+      - hostname: '*.cs.steampowered.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: *.edgecast.steamstatic.com
+      - hostname: '*.edgecast.steamstatic.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: *.steamcontent.com
+      - hostname: '*.steamcontent.com'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: cdn1-sea1.valve.net
+      - hostname: 'cdn1-sea1.valve.net'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: cdn2-sea1.valve.net
+      - hostname: 'cdn2-sea1.valve.net'
         path: ''
         priority: 1
         protocol: http
         service: steam
         source_port: 80
         target_port: 80
-      - hostname: *.steam-content-dnld-1.apac-1-cdn.cqloud.com
+      - hostname: '*.steam-content-dnld-1.apac-1-cdn.cqloud.com'
         path: ''
         priority: 1
         protocol: http
