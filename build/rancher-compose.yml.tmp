@@ -15,6 +15,13 @@ catalog:
           default: 10.0.0.1
           required: true
           type: string
+        - variable: "STEAMCACHE_CONTAINER"
+          label: Steam Caching container type
+          required: true
+          type: enum
+          options:
+            - generic
+            - steamcache
 services:
   dns:
     scale: 1

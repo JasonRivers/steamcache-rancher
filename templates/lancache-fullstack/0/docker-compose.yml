@@ -15,46 +15,103 @@ services:
     image: steamcache/sni-proxy:latest
     ports:
         - 443:443/tcp
-
+  apple:
+    image: steamcache/generic:latest
+    volumes:
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
+  arenanet:
+    image: steamcache/generic:latest
+    volumes:
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
   blizzard:
     image: steamcache/generic:latest
     volumes:
-      - ${CACHE_ROOT}/blizzard/data:/data/cache
-      - ${CACHE_ROOT}/blizzard/logs:/data/logs
-
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
+  daybreak:
+    image: steamcache/generic:latest
+    volumes:
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
   frontier:
     image: steamcache/generic:latest
     volumes:
-      - ${CACHE_ROOT}/frontier/data:/data/cache
-      - ${CACHE_ROOT}/frontier/logs:/data/logs
-
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
+  gog:
+    image: steamcache/generic:latest
+    volumes:
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
+  hirez:
+    image: steamcache/generic:latest
+    volumes:
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
+  minecraft:
+    image: steamcache/generic:latest
+    volumes:
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
+  nexusmods:
+    image: steamcache/generic:latest
+    volumes:
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
+  nintendo:
+    image: steamcache/generic:latest
+    volumes:
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
   origin:
     image: steamcache/generic:latest
     volumes:
-      - ${CACHE_ROOT}/origin/data:/data/cache
-      - ${CACHE_ROOT}/origin/logs:/data/logs
-
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
   riot:
     image: steamcache/generic:latest
     volumes:
-      - ${CACHE_ROOT}/riot/data:/data/cache
-      - ${CACHE_ROOT}/riot/logs:/data/logs
-
-  steam:
-    image: steamcache/steamcache:latest
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
+  rockstar:
+    image: steamcache/generic:latest
     volumes:
-      - ${CACHE_ROOT}/steam/data:/data/cache
-      - ${CACHE_ROOT}/steam/logs:/data/logs
-
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
+  sony:
+    image: steamcache/generic:latest
+    volumes:
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
+  steam:
+    image: steamcache/${STEAMCACHE_CONTAINER}:latest
+    volumes:
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
   uplay:
     image: steamcache/generic:latest
     volumes:
-      - ${CACHE_ROOT}/uplay/data:/data/cache
-      - ${CACHE_ROOT}/uplay/logs:/data/logs
-
-  windows:
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
+  twitch:
     image: steamcache/generic:latest
     volumes:
-      - ${CACHE_ROOT}/windows/data:/data/cache
-      - ${CACHE_ROOT}/windows/logs:/data/logs
-
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
+  wargaming:
+    image: steamcache/generic:latest
+    volumes:
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
+  wsus:
+    image: steamcache/generic:latest
+    volumes:
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
+  xboxlive:
+    image: steamcache/generic:latest
+    volumes:
+      - ${CACHE_ROOT}//cache:/data/cache
+      - ${CACHE_ROOT}//logs:/data/logs
