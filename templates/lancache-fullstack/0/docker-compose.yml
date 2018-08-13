@@ -4,7 +4,7 @@ services:
     image: rancher/lb-service-haproxy:v0.9.1
     ports:
       - 8089:80/tcp
-  nameserver:
+  dns:
     image: steamcache/steamcache-dns:latest
     ports:
       - 53:53/udp
@@ -40,7 +40,7 @@ services:
       - ${CACHE_ROOT}/riot/data:/data/cache
       - ${CACHE_ROOT}/riot/logs:/data/logs
 
-  steamcache:
+  steam:
     image: steamcache/steamcache:latest
     volumes:
       - ${CACHE_ROOT}/steam/data:/data/cache
