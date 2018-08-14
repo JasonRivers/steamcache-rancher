@@ -6,22 +6,23 @@ catalog:
     version: 1.0.0
     description: "Full LAN Caching stack for Blizzard, Frontier, Origin, Riot, Steam, Uplay and Windows Updates"
     questions:
-        - variable: "CACHE_ROOT"
-          label: Cache directory (This should be available on ALL hosts that the caching servers will be running on.
-          required: true
-          type: string
-        - variable: "CACHE_IP"
+        - variable: "LANCACHE_IP"
           label: Cache IP Address
           default: 10.0.0.1
           required: true
           type: string
         - variable: "STEAMCACHE_CONTAINER"
           label: Steam Caching container type
+          default: steamcache
           required: true
           type: enum
           options:
-            - generic
             - steamcache
+            - generic
+        - variable: "CACHE_ROOT"
+          label: Cache directory (This should be available on ALL hosts that the caching servers will be running on.
+          required: true
+          type: string
 services:
   dns:
     scale: 1
