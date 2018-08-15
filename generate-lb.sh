@@ -33,8 +33,8 @@ cat services.json | jq -r '.cache_domains[] | .name, .domain_files[]' | while re
         echo "  ${SERVICE}:" >> ${DOCKERFILE}
         echo "    image: steamcache/${CONTAINER}:latest" >> ${DOCKERFILE}
         echo "    volumes:" >> ${DOCKERFILE}
-        echo "      - \${CACHE_ROOT}/${SERIVCE}/cache:/data/cache" >> ${DOCKERFILE}
-        echo "      - \${CACHE_ROOT}/${SERIVCE}/logs:/data/logs" >> ${DOCKERFILE}
+        echo "      - \${CACHE_ROOT}/${SERVICE}/cache:/data/cache" >> ${DOCKERFILE}
+        echo "      - \${CACHE_ROOT}/${SERVICE}/logs:/data/logs" >> ${DOCKERFILE}
 
         echo "  ${SERVICE}:" >> ${SERVICES}
         echo "    scale: 1" >> ${SERVICES}
