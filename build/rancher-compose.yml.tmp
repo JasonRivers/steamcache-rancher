@@ -23,6 +23,11 @@ catalog:
           label: Cache directory (This should be available on ALL hosts that the caching servers will be running on.
           required: true
           type: string
+        - variable: "UPSTREAM_DNS"
+          label: Upstream DNS Server
+          required: true
+          type: string
+          default: 8.8.8.8
 services:
   dns:
     scale: 1

@@ -15,6 +15,7 @@ services:
     environment:
       USE_GENERIC_CACHE: true
       LANCACHE_IP: ${LANCACHE_IP}
+      UPSTREAM_DNS: ${UPSTREAM_DNS}
   sniproxy:
     image: steamcache/sniproxy:latest
     ports:
