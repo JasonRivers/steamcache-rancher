@@ -2,8 +2,12 @@
 
 set -e
 
-DOCKERFILE=${PWD}/templates/lancache-fullstack/0/docker-compose.yml
-RANCHERFILE=${PWD}/templates/lancache-fullstack/0/rancher-compose.yml
+TEMPLATEDIR=${1-0}
+
+mkdir -p ${PWD}/templates/lancache-fullstack/${TEMPLATEDIR}
+
+DOCKERFILE=${PWD}/templates/lancache-fullstack/${TEMPLATEDIR}/docker-compose.yml
+RANCHERFILE=${PWD}/templates/lancache-fullstack/${TEMPLATEDIR}/rancher-compose.yml
 
 DOCKER_TEMPLATE=${PWD}/build/docker-compose.yml
 RANCHER_TEMPLATE=${PWD}/build/rancher-compose.yml
@@ -12,7 +16,7 @@ SERVICES=${PWD}/build/services.yml
 curl -s -o services.json https://raw.githubusercontent.com/uklans/cache-domains/master/cache_domains.json
 
 cat ${DOCKER_TEMPLATE}.tmp > ${DOCKERFILE}
-cat ${RANCHER_TEMPLATE}.tmp > ${RANCHERFILE}
+cat ${RANCHER_TEMPLATE}.tmp | sed "s/version: 1.0./version: 1.0.${TEMPLATEDIR}/" > ${RANCHERFILE}
 
 cat services.json | jq -r '.cache_domains[] | .name, .domain_files[]' | while read L; do
 #cat services.json | jq -r .cache_domains[].name  | while read SERVICE ; do
